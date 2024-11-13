@@ -1,51 +1,54 @@
-# NodeJsMongoApi
-# NodeJsMongoApi
+# Simple RESTful API
 
-This project aims to create an API application that connects to MongoDB using **Node.js** and **Express.js** and logs HTTP requests. The project uses the `morgan` and `winston` logging libraries to log application events and HTTP requests. It includes interaction with the MongoDB database, necessary CRUD operations, and API endpoints.
+This project is a basic API application built using Node.js, Express.js, and MongoDB. The API includes essential functionalities such as basic CRUD operations, logging of HTTP requests, and structured error handling.
 
-## Contents
-
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Installation Instructions](#installation-instructions)
+## Table of Contents
+- [Features](#features)
+- [Setup](#setup)
+- [Environment Variables](#environment-variables)
 - [Usage](#usage)
+- [API Endpoints](#api-endpoints)
 - [Technologies](#technologies)
-- [Contributing](#contributing)
-- [License](#license)
 
-## Getting Started
+---
 
-This project was developed with **Node.js** and **MongoDB**. Follow the steps below to run the project on your local environment.
+## Features
 
-## Installation Instructions
+- CRUD operations with MongoDB
+- HTTP request logging using Morgan
+- Error handling with centralized logging
+- Structured project organization
 
-Steps to run the project:
+## Setup
 
-### 1. Install Dependencies
+To run this project on your local environment, follow these steps:
 
-To run the project on your local environment, use the following command to install dependencies:
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/username/project_name.git
+    ```
 
-```bash
-npm install
+2. Navigate to the project directory:
+    ```bash
+    cd project_name
+    ```
 
+3. Install the required dependencies:
+    ```bash
+    npm install
+    ```
 
+4. Set up your MongoDB connection details in a `.env` file as shown below in the **Environment Variables** section.
 
+5. Start the server:
+    ```bash
+    npm start
+    ```
 
+## Environment Variables
 
+Create a `.env` file in the project root with the following structure:
 
-- **GET /items** - List all items.
-- **POST /items** - A new combination of items.
-- **GET /items/:id** - Replace a flexible item with an id.
-- **PUT /items/:id** - Update a sensitive item.
-- **DELETE /items/:id** - Delete a sensitive item.
-
-
-
-- **Morgan** - Used to log HTTP components.
-- **Winston** - Used to log errors and general events. Logs to `logs' storage location.
-
-
-
-
-```bash
-npm run dev
+```env
+MONGO_URI=mongodb://localhost:27017/project_name
+PORT=3000
